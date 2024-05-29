@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加入我们 - 电子设计创新实验室</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #f1f1f1;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 60px;
+            color: darkslategray;
+        }
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        .swiper-container {
+            width: 100vw;
+            height: 70vh;
+            position: relative;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .swiper-pagination {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: white;
+        }
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            background-color: #fff;
+            color: rgb(70, 41, 41);
+            height: 50vh;
+        }
+        .title {
+            font-size: 50px;
+            width: 45%;
+        }
+        .description {
+            font-size: 36px;
+            width: 45%;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        电子设计创新实验室
+    </header>
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="about.html">成员</a>
+        <a href="news.html">新闻</a>
+        <a href="research.html">研究领域</a>
+        <a href="contact.html">加入我们</a>
+    </nav>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.mySwiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+</body>
+</html>
