@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 - 电子设计创新实验室</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #f1f1f1;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: calc(3vw + 5px); /* 自适应字体大小，不小于5px */
+            color: darkslategray;
+        }
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        .swiper-container {
+            width: 100vw;
+            height: 70vh;
+            position: relative;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .swiper-pagination {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            text-align: center; /* 确保分页器中的内容水平居中 */
+            z-index: 10;
+        }
+        .swiper-pagination-bullet {
+            display: inline-block;
+            width: 30px; /* 增加宽度 */
+            height: 10px; /* 调整高度 */
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 2px; /* 减少圆角以形成长方形 */
+            margin: 0 5px;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: white;
+        }
+        .swiper-button-prev, .swiper-button-next {
+            color: white;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px; /* 调整字体大小 */
+            background: rgba(0, 0, 0, 0); /* 将背景设置为透明 */
+            position: absolute;
+            top: 0;
+            width: 50px;
+            z-index: 10; /* 确保按钮在其他内容之上 */
+            opacity: 0.75; /* 轻微的透明效果，增强视觉效果 */
+        }
+        .swiper-button-prev {
+            left: 30px; /* 将左侧按钮向右移动一些 */
+        }
+        .swiper-button-next {
+            right: 30px; /* 将右侧按钮向左移动一些 */
+        }
+        .swiper-button-prev::after, .swiper-button-next::after {
+            font-weight: bold; /* 加粗箭头字体 */
+            color: white; /* 设置箭头颜色为白色 */
+        }
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            background-color: #fff;
+            color: rgb(70, 41, 41);
+            height: 50vh;
+        }
+        .title {
+            font-size: calc(2.5vw + 5px); /* 自适应字体大小，不小于5px */
+            width: 45%;
+        }
+        .description {
+            font-size: calc(1.5vw + 5px); /* 自适应字体大小，不小于5px */
+            width: 45%;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>电子设计创新实验室</header>
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="about.html">成员</a>
+        <a href="news.html">新闻</a>
+        <a href="research.html">研究领域</a>
+        <a href="contact.html">加入我们</a>
+    </nav>
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="C:/Users/admin/Desktop/1.png" alt="Slide 1"></div>
+            <div class="swiper-slide"><img src="C:/Users/admin/Desktop/2.png" alt="Slide 2"></div>
+            <div class="swiper-slide"><img src="C:/Users/admin/Desktop/3.png" alt="Slide 3"></div>
+        </div>
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Swiper Navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <div class="header-section">
+        <div class="title">电子设计创新实验室</div>
+        <div class="description">
+            <ul>
+                <li>室内多源融合目标定位与追踪</li>
+                <li>多车仿真、实车智能算法及 BF 算法验证（仿真&小车）</li>
+                <li>单车仿真、实车智能算法数字孪生系统（小车、沙盘）</li>
+                <li>针对多智能体安全强化学习策略生成（仿真  & 小车）</li>
+                <li>改造车数据采集、算法评估（改造车）</li>
+                <li>云平台及基于云平台小车测试框架</li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.mySwiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                type: 'bullets' // 确保这一行没有被注释或删除
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+</body>
+</html>
